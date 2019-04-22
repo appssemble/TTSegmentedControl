@@ -647,7 +647,7 @@ extension TTSegmentedControl {
         return index ?? 0
     }
     
-    public func selectItemAt(index: Int, animated: Bool = false) {
+    @objc public func selectItemAt(index: Int, animated: Bool = false) {
         if !isConfigurated {
             currentSelectedIndex = index
             return
