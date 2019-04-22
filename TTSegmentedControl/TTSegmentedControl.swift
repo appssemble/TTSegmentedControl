@@ -43,14 +43,14 @@ open class TTSegmentedControl: UIView {
         var options:UIView.AnimationOptions = .curveEaseInOut
     }
     
-    public var itemTitles: [String] = ["Item1", "Item2", "Item3"]
+    @objc open var itemTitles: [String] = ["Item1", "Item2", "Item3"]
     
     open var attributedDefaultTitles: [NSAttributedString]!
     open var attributedSelectedTitles: [NSAttributedString]!
     /*
      Gets called when an item is selected
      */
-    public var didSelectItemWith:((_ index: Int, _ title: String?) -> ())?
+    @objc open var didSelectItemWith:((_ index: Int, _ title: String?) -> ())?
     /*
      Gets called when the dragging state is changed
      */
@@ -58,7 +58,7 @@ open class TTSegmentedControl: UIView {
     
     fileprivate(set) var isDragging = false
     open var allowDrag = true
-    public var allowChangeThumbWidth = true
+    @objc open var allowChangeThumbWidth = true
     
     fileprivate var containerView = UIView()
     fileprivate var thumbContainerView = UIView()
